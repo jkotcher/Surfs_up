@@ -54,3 +54,5 @@ When examining precipitation over one year from this dataset there are months wh
 ### Additional Queries
 These two queries are both extracting the precipitation data for the two months as well as the temperature data to see the relationship between the two.
 
+june_temp_prcp = session.query(Measurement.tobs, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
+
