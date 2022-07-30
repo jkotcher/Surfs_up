@@ -56,3 +56,5 @@ These two queries are both extracting the precipitation data for the two months 
 
 june_temp_prcp = session.query(Measurement.tobs, Measurement.prcp).filter(extract('month', Measurement.date) == 6).all()
 
+
+dec_temp_prcp = session.query(Measurement.tobs, Measurement.prcp).filter(extract('month', Measurement.date) == 12).all()
